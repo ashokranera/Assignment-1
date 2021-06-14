@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+<div class="h3" id="demo"></div>
+
+<script>
+    const number = parseInt(prompt('Enter the Number: '));
+
+    for(var i = 1; i <= 10; i++) {
+           const result = i * number;
+           console.log(number + " * " + i + " = " + result);
+           var d = document.getElementById('demo');
+           d.innerHTML+=(number + " * " + i + " = " + result + "<br/>");
+
+
+    }
+</script>
+
+</body>
+</html>
+
+
+<!-- 1 variable input from prompt box to Print Multiplication table of inputted number. 
+for example if someone enter input 5 in prompt box than display out put will be like
+5 X 1 =5-->

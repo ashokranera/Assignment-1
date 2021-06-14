@@ -1,0 +1,71 @@
+<htm>
+
+    <head>
+    </head>
+
+    <body>
+
+        <table id="myTable">
+            <tr>
+
+                <th>Prime Number</th>
+
+                <th>composite numbers </th>
+
+            </tr>
+            <tbody>
+
+                <tr>
+
+                    <td></td>
+
+                    <td></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <script>
+            var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+
+
+            var num1 = parseInt(prompt('Enter Number 1 : '));
+            var num2 = parseInt(prompt('Enter Number 2 : '));
+
+            var counter = 0;
+
+
+            for (var i = num1; i <= num2; ++i) {
+                var newRow = tableRef.insertRow(tableRef.rows.length);
+
+                var primeCell = newRow.insertCell(0);
+                var compositCell = newRow.insertCell(0);
+                counter = 0;
+                for (var j = 2; j <= num2; ++j) {
+                    if (i >= j && i % j == 0) {
+                        ++counter;
+                    }
+
+                }
+                if (counter == 1) {
+                    var OddNumber = document.createTextNode(i);
+                    compositCell.appendChild(OddNumber);
+
+                }
+                else {
+
+                    var evenNumber = document.createTextNode(i);
+                    primeCell.appendChild(evenNumber);
+                }
+
+            }
+
+        </script>
+
+    </body>
+
+    </html>
+
+    <!-- prime and composite numbers -->

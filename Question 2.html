@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div class="h3" id="demo"></div>
+
+    <script>
+        var number = parseInt(prompt('Enter Number: '));
+        var result = factorial(number);
+
+        var d = document.getElementById('demo');
+        d.innerHTML += (" the factorial of " + number + " is " + result)
+
+        function factorial(number) {
+            if (number == 0) {
+                return 1;
+            }
+            else {
+                return number * factorial(number - 1);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- Input one variable from prompt and print its factorial. -->

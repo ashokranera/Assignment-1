@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<htm>
+
+    <head>
+    </head>
+
+    <body>
+
+        <table id="myTable">
+            <tr>
+
+               
+
+                <th>Even</th>
+
+                <th>Odd</th>
+
+            </tr>
+            <tbody>
+
+                <tr>
+
+                    <td></td>
+
+                    <td></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <script>
+
+            var insertNewRow = function (event, odd) {
+
+
+                var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+
+                var newRow = tableRef.insertRow(tableRef.rows.length);
+
+                var evenCell = newRow.insertCell(0);
+
+                var oddCell = newRow.insertCell(0);
+
+                var evenNumber = document.createTextNode(j);
+
+                var OddNumber = document.createTextNode(i);
+
+                evenCell.appendChild(evenNumber);
+
+                oddCell.appendChild(OddNumber);
+
+            }
+
+            var num1 = parseInt(prompt('Enter Number 1 : '));
+            var num2 = parseInt(prompt('Enter Number 2 : '));
+
+            for (i = num1; i <= num2; i++) {
+
+                if (i % 2 == 0) {
+
+                    var j = i + 1;
+                    if (j > num2) {
+                        j=""
+                        insertNewRow(i, j)
+                    }
+                    else {
+                        insertNewRow(i, j)
+                    }
+                }
+
+            }
+
+        </script>
+
+    </body>
+
+    </html>
+
+    <!-- separate odd and even number -->
